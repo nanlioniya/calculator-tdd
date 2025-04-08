@@ -30,7 +30,7 @@ jobs:
     
     - name: Run linting
       run: |
-        pylint calculator/ tests/ --fail-under=8.0
+        PYTHONPATH=$PYTHONPATH:$(pwd) pylint calculator/ tests/ --fail-under=8.0
 
 
     - name: Upload coverage reports to Codecov
